@@ -1,0 +1,16 @@
+- Journal Swing Future Plans -
+
+Version Indev 1.0
+- Minor user interface improvements
+
+Version Indev 1.1
+- Implement photo displaying
+- Implement settings
+- Compile as app with icon
+- Add proper 'homepage'
+- Add sorting function to entry array list
+
+Version Indev 1.2
+- Implement an editing function
+- Implement code / parsing to allow for bold, italics, etc...
+- Implement transparency, and blur effects, finalize astetics
