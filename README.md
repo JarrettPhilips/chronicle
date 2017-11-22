@@ -2,7 +2,11 @@
 **Jarrett Philips**
 
 ### Overview
-This is a basic Journaling Program.
+This is a basic Journaling Program. It features:
+- Sorting Entries
+- Photo support
+- Uses a custom markdown language
+- Viewing, creating, and editing journal entries through one interface
 
 ### Running
 
