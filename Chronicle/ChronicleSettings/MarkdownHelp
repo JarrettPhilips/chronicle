@@ -1,0 +1,8 @@
+Chronicle uses a personally built markdown notation. There are currently only a few notations to learn, demonstrated below. Chronicle uses an HTML editor, so it is also possible to use most HTML tags directly in the entry.
+
+Custom Notation
+---------------
+*Bold*
+**Italics**
+<<Image.jpg>>
+^^Rating^^

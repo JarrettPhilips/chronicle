@@ -29,6 +29,7 @@ public class Assembly extends JFrame {
         this.setVisible(true);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setLayout(new GridBagLayout());
+        this.setTitle("Chronicle");
         GridBagConstraints c = new GridBagConstraints();
 
         contentPanel = createContentPanel();

@@ -1,12 +1,20 @@
+/*
+    EntryData.java
+
+    Stores and manages the data for each entry
+*/
+
 import java.awt.*;
 import java.io.File;
+import java.util.HashMap;
 
 public class EntryData {
     /*
         Variables
     */
-    private String title = "-1";
-    private String dateString = "-1";
+    private String title = "Title";
+    private String dateString = "Date";
+
     private int dateInt = -1;
     private int rating = -1;
 
@@ -16,12 +24,14 @@ public class EntryData {
     private String txtEntryDirectory = "-1";
 
     private String entryText = "-1";
+
     /*
         Constructors
     */
-    public EntryData(String entryDirectory, Color pc, Color sc, Color hc, Color lc, Color mc){
+    public EntryData(String entryDirectory, HashMap<String, Color> colorPackage){
         this.entryDirectory = entryDirectory;
-        headerColor = calculateHeaderColor(sc, hc, lc, mc);
+
+        headerColor = calculateHeaderColor(colorPackage.get("secondaryColor"), colorPackage.get("highColor"), colorPackage.get("lowColor"), colorPackage.get("medianColor"));
         findDate();
     }
 
@@ -88,6 +98,7 @@ public class EntryData {
     private void findRating(){
 
     }
+
     /*
         Get Functions
     */
