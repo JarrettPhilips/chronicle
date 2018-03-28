@@ -41,7 +41,7 @@ public class Settings {
             line = s.nextLine();
             index = line.indexOf('=') + 1;
             journalDirectory = line.substring(index);
-            System.out.println(journalDirectory);
+            //System.out.println(journalDirectory);
 
             //Primary Color
             line = s.nextLine();
@@ -50,7 +50,7 @@ public class Settings {
             g = Integer.parseInt(line.substring(index + 4, index + 7));
             b = Integer.parseInt(line.substring(index + 8, index + 11));
             primaryColor = new Color(r, g, b);
-            System.out.println(primaryColor);
+            //System.out.println(primaryColor);
 
             //Secondary Color
             line = s.nextLine();
@@ -59,7 +59,7 @@ public class Settings {
             g = Integer.parseInt(line.substring(index + 4, index + 7));
             b = Integer.parseInt(line.substring(index + 8, index + 11));
             secondaryColor = new Color(r, g, b);
-            System.out.println(secondaryColor);
+            //System.out.println(secondaryColor);
 
             //High Color
             line = s.nextLine();
@@ -68,7 +68,7 @@ public class Settings {
             g = Integer.parseInt(line.substring(index + 4, index + 7));
             b = Integer.parseInt(line.substring(index + 8, index + 11));
             highColor = new Color(r, g, b);
-            System.out.println(highColor);
+            //System.out.println(highColor);
 
             //Low Color
             line = s.nextLine();
@@ -77,7 +77,7 @@ public class Settings {
             g = Integer.parseInt(line.substring(index + 4, index + 7));
             b = Integer.parseInt(line.substring(index + 8, index + 11));
             lowColor = new Color(r, g, b);
-            System.out.println(lowColor);
+            //System.out.println(lowColor);
 
             //Median Color
             line = s.nextLine();
@@ -86,7 +86,7 @@ public class Settings {
             g = Integer.parseInt(line.substring(index + 4, index + 7));
             b = Integer.parseInt(line.substring(index + 8, index + 11));
             medianColor = new Color(r, g, b);
-            System.out.println(medianColor);
+            //System.out.println(medianColor);
 
         } catch(Exception e){
             System.out.println("Error thrown during settings load");
@@ -104,7 +104,6 @@ public class Settings {
     /*
         Functions
     */
-
     private void generateSettingsFile(){
 
     }

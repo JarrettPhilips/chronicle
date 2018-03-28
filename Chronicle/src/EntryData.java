@@ -5,14 +5,15 @@
 */
 
 import java.awt.*;
-import java.io.File;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class EntryData {
     /*
         Variables
     */
-    private String title = "Title";
+    private String titleString = "Title";
     private String dateString = "Date";
 
     private int dateInt = -1;
@@ -23,6 +24,8 @@ public class EntryData {
     private String entryDirectory = "-1";
     private String txtEntryDirectory = "-1";
 
+    private ArrayList<String> directoryOfPhotos = new ArrayList<String>();
+
     private String entryText = "-1";
 
     /*
@@ -30,14 +33,17 @@ public class EntryData {
     */
     public EntryData(String entryDirectory, HashMap<String, Color> colorPackage){
         this.entryDirectory = entryDirectory;
-
         headerColor = calculateHeaderColor(colorPackage.get("secondaryColor"), colorPackage.get("highColor"), colorPackage.get("lowColor"), colorPackage.get("medianColor"));
-        findDate();
+        entryText = findContent();
+        dateString = findDate();
+        titleString = findTitle();
+        rating = findRating(entryText);
     }
 
     /*
         Functions
     */
+
     private Color calculateHeaderColor(Color secondaryColor, Color highColor, Color lowColor, Color medianColor){
         int r = 0;
         int g = 0;
@@ -67,7 +73,7 @@ public class EntryData {
         return entryColor;
     }
 
-    private void findDate(){
+    private String findDate(){
         File entryFolder = new File(entryDirectory);
 
         dateInt = Integer.parseInt(entryFolder.getName());
@@ -92,17 +98,96 @@ public class EntryData {
         else
             day = day + "th";
 
-        dateString = month + " " + day + ", " + year;
+        return month + " " + day + ", " + year;
     }
 
-    private void findRating(){
+    private String findTitle(){
+        String title = "";
+        File entryFolder = new File(entryDirectory);
+        File[] listOfFiles = entryFolder.listFiles();
 
+        for(File file : listOfFiles){
+            String name = file.getName();
+            String extension = name.substring(name.length() - 3);
+
+            if(extension.equals("txt")){
+                String titleUnedited = name.substring(0, name.length() - 4);
+                title = titleUnedited.replace("_", " ");
+            }
+        }
+
+        return title;
+    }
+
+    private String findContent(){
+        try {
+            File[] files = txtFinder(entryDirectory);
+            File file = files[0];
+            txtEntryDirectory = files[0].getName();
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line = null;
+            StringBuilder stringBuilder = new StringBuilder();
+            String ls = "<br>";
+
+            try {
+                while ((line = reader.readLine()) != null) {
+                    stringBuilder.append(line);
+                    stringBuilder.append(ls);
+                }
+
+                return stringBuilder.toString();
+            } finally {
+                reader.close();
+            }
+        } catch(IOException e){
+            System.out.println("Error: LMLEntryPanel/getFileContents: IOException");
+        }
+
+        return "-1";
+    }
+
+    private File[] txtFinder(String dirName){
+        File dir = new File(dirName);
+
+        return dir.listFiles(new FilenameFilter() {
+            public boolean accept(File dir, String filename)
+            { return filename.endsWith(".txt"); }
+        } );
+
+    }
+
+    private int findRating(String content){
+        boolean tagOpen = false;
+        int ratingStartIndex = 0;
+
+        for(int i = 0; i != content.length() - 1; i ++){
+            String doubleCharKey = content.substring(i, i + 2);
+
+            if(doubleCharKey.equals("^^")){
+                if(tagOpen){
+                    String ratingString = content.substring(ratingStartIndex + 2, i);
+                    int ratingInt = Integer.parseInt(ratingString);
+
+                    if(ratingInt > 0 && ratingInt < 11){
+                        return ratingInt;
+                    }
+
+                    content = content.substring(0, ratingStartIndex) + content.substring(i + 2, content.length());
+                    tagOpen = false;
+                } else {
+                    ratingStartIndex = i;
+                    tagOpen = true;
+                }
+            }
+        }
+
+        return -1;
     }
 
     /*
         Get Functions
     */
-    public String getTitle(){return title;}
+    public String getTitle(){return titleString;}
     public String getDateString(){return dateString;}
     public String getEntryText(){return entryText;}
     public Color getHeaderColor(){return headerColor;}
