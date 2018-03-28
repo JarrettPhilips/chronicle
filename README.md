@@ -10,12 +10,14 @@
 | Entry management backend  | March 24th  |     X     |
 | Frame and UI main panel   | March 25th  |     X     |
 | Help Panel                | March 25th  |     X     |
-| Entry Panel               | March 27th  |           |
-| Editing Panel Frontend    | March 28th  |	      |
+| Entry Panel               | March 27th  |     X     |
+| Editing Panel Frontend    | March 28th  |	X     |
 | Editing Panel Backend     | March 29th  |	      |
-| Selection Button	    | March 30th  |	      |
-| Selection Panel           | March 31st  |           |
-| UI Functional (Release)   | April 1st   |           |
+| Selection Button	    | March 30th  |	X     |
+| Selection Panel           | March 30th  |           |
+| UI Functional		    | March 31st  |           |
+| Aesthetic Correction	    | April 1st   |	      |
+
 
 *2.0.0* - Massive improvement and a complete re-write, but contained a fatal flaw in the way things were organized that made me restart.
 - Canceled while still in development. Is not available for download.
