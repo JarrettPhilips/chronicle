@@ -22,11 +22,20 @@ public class Assembly extends JFrame {
 
     private Dimension defaultSize = new Dimension(600, 400);
 
+    //Components
     private JPanel contentPanel;
     private JPanel auxillaryPanel;
     private JPanel buttonPanel;
     private JPanel logoPanel;
 
+    //Content Panels
+    private JPanel wallpaperPanel;
+    private JPanel selectionPanel;
+    private JPanel entryPanel;
+    private JPanel helpPanel;
+    private JPanel editingPanel;
+
+    //Buttons
     private JButton createEntryButton;
     private JButton editEntryButton;
     private JButton helpButton;
@@ -78,6 +87,20 @@ public class Assembly extends JFrame {
         c.weighty = 1.0;
         this.add(contentPanel, c);
 
+        //Generates content-containing panels
+        wallpaperPanel = new WallpaperPanel(colorPackage);
+        helpPanel = new HelpPanel(colorPackage);
+        editingPanel = new EditingPanel(colorPackage);
+
+        //Sets default content to components
+        c = new GridBagConstraints();
+        c.gridx = 0;
+        c.gridy = 0;
+        c.weightx = 1.0;
+        c.weighty = 1.0;
+        c.fill = GridBagConstraints.BOTH;
+        contentPanel.add(wallpaperPanel, c);
+
         //Updates the frame
         this.revalidate();
         this.repaint();
@@ -88,6 +111,7 @@ public class Assembly extends JFrame {
     */
     private JPanel createContentPanel(){
         JPanel cp = new JPanel();
+        cp.setLayout(new GridBagLayout());
         cp.setBackground(new Color(0, 255, 0));
         return cp;
     }
@@ -123,11 +147,17 @@ public class Assembly extends JFrame {
                     createEntryButtonToggled = false;
                     createEntryButton.setBackground(colorPackage.get("primaryColor"));
                     createEntryButton.setForeground(colorPackage.get("secondaryColor"));
+                    contentPanel.removeAll();
+                    contentPanel.add(wallpaperPanel, c);
+                    contentPanel.updateUI();
                 } else {
                     resetButtons();
                     createEntryButtonToggled = true;
                     createEntryButton.setBackground(colorPackage.get("secondaryColor"));
                     createEntryButton.setForeground(colorPackage.get("primaryColor"));
+                    contentPanel.removeAll();
+                    contentPanel.add(editingPanel, c);
+                    contentPanel.updateUI();
                 }
             }
         } );
@@ -184,11 +214,17 @@ public class Assembly extends JFrame {
                     helpButtonToggled = false;
                     helpButton.setBackground(colorPackage.get("primaryColor"));
                     helpButton.setForeground(colorPackage.get("secondaryColor"));
+                    contentPanel.removeAll();
+                    contentPanel.add(wallpaperPanel, c);
+                    contentPanel.updateUI();
                 } else {
                     resetButtons();
                     helpButtonToggled = true;
                     helpButton.setBackground(colorPackage.get("secondaryColor"));
                     helpButton.setForeground(colorPackage.get("primaryColor"));
+                    contentPanel.removeAll();
+                    contentPanel.add(helpPanel, c);
+                    contentPanel.updateUI();
                 }
             }
         } );

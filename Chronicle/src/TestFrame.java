@@ -11,9 +11,18 @@ public class TestFrame {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setLocation(dim.width/2-frame.getSize().width/2, dim.height/2-frame.getSize().height/2);
+        frame.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
 
 
         //This adds the element I want to test
         //EntryButton eb = new EntryButton();
+        /*
+        EditingPanel e = new EditingPanel();
+        c.fill = GridBagConstraints.BOTH;
+        c.weighty = 1.0;
+        c.weightx = 1.0;
+        frame.add(e, c);
+        */
     }
 }
