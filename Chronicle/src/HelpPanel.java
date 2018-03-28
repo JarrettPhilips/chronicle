@@ -1,9 +1,16 @@
+/*
+    HelpPanel.java
+
+    JPanel to be loaded into the Assembly frame that displays information to provide guidance to users. Reads in this information from external files.
+*/
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileReader;
+import java.util.HashMap;
 
 public class HelpPanel extends JPanel{
     /*
@@ -27,25 +34,28 @@ public class HelpPanel extends JPanel{
     /*
         Constructors
     */
-    public HelpPanel(Color primaryColor, Color secondayColor){
+    public HelpPanel(HashMap<String, Color> cp){
+        primaryColor = cp.get("primaryColor");
+        secondaryColor = cp.get("secondaryColor");
+
         this.setLayout(new GridBagLayout());
-        this.setBackground(secondayColor);
+        this.setBackground(secondaryColor);
         GridBagConstraints c = new GridBagConstraints();
         this.primaryColor = primaryColor;
-        this.secondaryColor = secondayColor;
+        this.secondaryColor = secondaryColor;
 
         c.gridx= 0;
         c.gridy = 0;
         c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = 1.0;
-        this.add(createHeader(primaryColor, secondayColor), c);
+        this.add(createHeader(primaryColor, secondaryColor), c);
 
         contentTextArea = new JTextArea();
         contentTextArea.setEditable(false);
         contentTextArea.setLineWrap(true);
         contentTextArea.setWrapStyleWord(true);
         contentTextArea.setBorder(new EmptyBorder(40, 40, 40, 40));
-        contentTextArea.setBackground(secondayColor);
+        contentTextArea.setBackground(secondaryColor);
         c.gridy = 1;
         c.fill = GridBagConstraints.BOTH;
         c.weighty = 1.0;

@@ -26,6 +26,6 @@ public class Main {
         System.out.println("Loading Entries");
         c = new EntryCollection(s.journalDirectory, s.colorPackage);
         System.out.println("Building UI Assembly");
-        a = new Assembly(new Color(42,52,54), new Color(245,246,250));
+        a = new Assembly(s.colorPackage);
     }
 }

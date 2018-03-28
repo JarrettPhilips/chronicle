@@ -1,39 +1,47 @@
+/*
+    Assembly.java
+
+    Is the frame for the UI. Holds all other components
+*/
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.HashMap;
 
 public class Assembly extends JFrame {
     /*
         Variables
     */
-    Color primaryColor;
-    Color secondaryColor;
+    private HashMap<String, Color> colorPackage = new HashMap<String, Color>();
 
-    Font logoFont = new Font("Futura", Font.BOLD, 40);
-    Font buttonFont = new Font("Futura", Font.PLAIN, 20);
+    private Font logoFont = new Font("Futura", Font.BOLD, 40);
+    private Font buttonFont = new Font("Futura", Font.PLAIN, 20);
 
-    Dimension defaultSize = new Dimension(600, 400);
+    private Dimension defaultSize = new Dimension(600, 400);
 
-    JPanel contentPanel;
-    JPanel auxillaryPanel;
-    JPanel controlPanel;
+    private JPanel contentPanel;
+    private JPanel auxillaryPanel;
+    private JPanel controlPanel;
 
     /*
         Constructors
     */
-    public Assembly(Color primaryColor, Color secondaryColor){
-        this.primaryColor = primaryColor;
-        this.secondaryColor = secondaryColor;
-
+    public Assembly(HashMap<String, Color> cp){
+        //Sets up the JFrame settings
+        colorPackage = cp;
         this.setSize(defaultSize);
         this.setVisible(true);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setLayout(new GridBagLayout());
         this.setTitle("Chronicle");
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         GridBagConstraints c = new GridBagConstraints();
 
+        //Adds other components
         contentPanel = createContentPanel();
-        controlPanel = createControlPanel();
+        controlPanel = createButtonPanel();
         auxillaryPanel = createAuxillaryPanel();
 
         c.gridx = 0;
@@ -51,6 +59,10 @@ public class Assembly extends JFrame {
         c.weightx = 1.0;
         c.weighty = 1.0;
         this.add(contentPanel, c);
+
+        //Updates the frame
+        this.revalidate();
+        this.repaint();
     }
 
     /*
@@ -68,16 +80,16 @@ public class Assembly extends JFrame {
         return ap;
     }
 
-    private JPanel createControlPanel(){
+    private JPanel createButtonPanel(){
         JPanel cp = new JPanel();
-        cp.setBackground(primaryColor);
+        cp.setBackground(colorPackage.get("primaryColor"));
         cp.setBorder(new EmptyBorder(20, 20, 20, 20));
         cp.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
 
         JLabel logoLabel = new JLabel("Chronicle");
-        logoLabel.setBackground(primaryColor);
-        logoLabel.setForeground(secondaryColor);
+        logoLabel.setBackground(colorPackage.get("primaryColor"));
+        logoLabel.setForeground(colorPackage.get("secondaryColor"));
         logoLabel.setFont(logoFont);
         c.gridx = 0;
         c.gridy = 0;
@@ -86,8 +98,8 @@ public class Assembly extends JFrame {
 
         JButton createEntryButton = new JButton("Add");
         createEntryButton.setBorder(new EmptyBorder(10, 10, 10, 10));
-        createEntryButton.setBackground(primaryColor);
-        createEntryButton.setForeground(secondaryColor);
+        createEntryButton.setBackground(colorPackage.get("primaryColor"));
+        createEntryButton.setForeground(colorPackage.get("secondaryColor"));
         createEntryButton.setFont(buttonFont);
         c.gridx = 0;
         c.gridy = 1;
@@ -96,13 +108,18 @@ public class Assembly extends JFrame {
 
         JButton editEntryButton = new JButton("Edit");
         editEntryButton.setBorder(new EmptyBorder(10, 10, 10, 10));
-        editEntryButton.setBackground(primaryColor);
-        editEntryButton.setForeground(secondaryColor);
+        editEntryButton.setBackground(colorPackage.get("primaryColor"));
+        editEntryButton.setForeground(colorPackage.get("secondaryColor"));
         editEntryButton.setFont(buttonFont);
         c.gridx = 1;
         c.gridy = 1;
         cp.add(editEntryButton, c);
 
         return cp;
+    }
+
+    private JPanel createLogoPanel(){
+        JPanel panel = new JPanel();
+        return panel;
     }
 }
