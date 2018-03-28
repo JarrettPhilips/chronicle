@@ -15,28 +15,56 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="45">
+              <caret line="3" column="73" lean-forward="false" selection-start-line="3" selection-start-column="73" selection-end-line="3" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntryButton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntryButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="66" column="12" lean-forward="false" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
               <folding>
-                <element signature="e#0#645#0" expanded="true" />
+                <element signature="method#EntryButton#0;class#EntryButton#0" expanded="false" />
+                <element signature="method#buttonSelected#0;class#EntryButton#0" expanded="false" />
+                <element signature="method#buttonUnselected#0;class#EntryButton#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Assembly.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Assembly.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Assembly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+            <state relative-caret-position="101">
+              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
               <folding>
-                <element signature="e#0#9639#0" expanded="true" />
+                <element signature="e#0#10013#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="method#Assembly#0;class#Assembly#0" expanded="false" />
                 <element signature="method#createContentPanel#0;class#Assembly#0" expanded="false" />
                 <element signature="method#createAuxillaryPanel#0;class#Assembly#0" expanded="false" />
-                <element signature="class#5828:6715" expanded="false" />
+                <element signature="method#createButtonPanel#0;class#Assembly#0" expanded="false" />
                 <element signature="method#resetButtons#0;class#Assembly#0" expanded="false" />
                 <element signature="method#createLogoPanel#0;class#Assembly#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectionPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SelectionPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#481#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,13 +73,34 @@
       <file leaf-file-name="EntryPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EntryPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+            <state relative-caret-position="60">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
               <folding>
-                <element signature="e#883#891#0" expanded="true" />
-                <marker date="1522215550295" expanded="false" signature="2579:5845" ph="{...}" />
-                <marker date="1522215550295" expanded="false" signature="7427:7650" ph="{...}" />
-                <marker date="1522215550295" expanded="false" signature="7683:7759" ph="{}" />
+                <element signature="e#0#7788#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1003#1011#0" expanded="true" />
+                <element signature="method#EntryPanel#0;class#EntryPanel#0" expanded="false" />
+                <element signature="method#createBody#0;class#EntryPanel#0" expanded="false" />
+                <element signature="method#processFileContent#0;class#EntryPanel#0" expanded="false" />
+                <element signature="method#createHeader#0;class#EntryPanel#0" expanded="false" />
+                <element signature="method#loadEntryData#0;class#EntryPanel#0" expanded="false" />
+                <element signature="method#main#0;class#EntryPanel#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelpPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HelpPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#HelpPanel#0;class#HelpPanel#0" expanded="false" />
+                <element signature="method#createHeader#0;class#HelpPanel#0" expanded="false" />
+                <element signature="method#resetButtons#0;class#HelpPanel#0" expanded="false" />
+                <element signature="method#loadTxtToContentPanel#0;class#HelpPanel#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,9 +109,10 @@
       <file leaf-file-name="EntryData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EntryData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-65">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="464">
+              <caret line="192" column="60" lean-forward="false" selection-start-line="192" selection-start-column="60" selection-end-line="192" selection-end-column="60" />
               <folding>
+                <element signature="e#0#6360#0" expanded="true" />
                 <element signature="method#EntryData#0;class#EntryData#0" expanded="false" />
                 <element signature="method#calculateHeaderColor#0;class#EntryData#0" expanded="false" />
                 <element signature="method#findDate#0;class#EntryData#0" expanded="false" />
@@ -70,20 +120,6 @@
                 <element signature="method#findContent#0;class#EntryData#0" expanded="false" />
                 <element signature="method#txtFinder#0;class#EntryData#0" expanded="false" />
                 <element signature="method#findRating#0;class#EntryData#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditingPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/EditingPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#EditingPanel#0;class#EditingPanel#0" expanded="false" />
-                <element signature="method#createHeaderPanel#0;class#EditingPanel#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,19 +142,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EntryButton.java" />
         <option value="$PROJECT_DIR$/src/DevelopmentPlan" />
         <option value="$PROJECT_DIR$/src/EntryCollection.java" />
         <option value="$PROJECT_DIR$/src/Settings.java" />
-        <option value="$PROJECT_DIR$/src/EntryData.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/HelpPanel.java" />
-        <option value="$PROJECT_DIR$/src/SelectionPanel.java" />
         <option value="$PROJECT_DIR$/src/WallpaperPanel.java" />
-        <option value="$PROJECT_DIR$/src/EntryPanel.java" />
         <option value="$PROJECT_DIR$/src/TestFrame.java" />
         <option value="$PROJECT_DIR$/src/Assembly.java" />
+        <option value="$PROJECT_DIR$/ChronicleSettings/GeneralHelp" />
+        <option value="$PROJECT_DIR$/ChronicleSettings/About" />
         <option value="$PROJECT_DIR$/src/EditingPanel.java" />
+        <option value="$PROJECT_DIR$/src/HelpPanel.java" />
+        <option value="$PROJECT_DIR$/src/EntryData.java" />
+        <option value="$PROJECT_DIR$/src/EntryPanel.java" />
+        <option value="$PROJECT_DIR$/src/EntryButton.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/SelectionPanel.java" />
       </list>
     </option>
   </component>
@@ -362,46 +400,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/EditingPanel.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/EntryButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DevelopmentPlan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SelectionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EntryData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -422,9 +433,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#645#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -433,7 +442,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -527,9 +536,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#645#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -538,7 +545,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -632,9 +639,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#645#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -643,7 +648,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -733,9 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#645#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +747,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -769,33 +772,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DevelopmentPlan">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1654#0" expanded="true" />
-            <element signature="method#EntryCollection#0;class#EntryCollection#0" expanded="false" />
-            <element signature="method#loadEntries#0;class#EntryCollection#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,35 +793,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SelectionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WallpaperPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HelpPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#5742#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#HelpPanel#0;class#HelpPanel#0" expanded="false" />
-            <element signature="method#createHeader#0;class#HelpPanel#0" expanded="false" />
-            <element signature="method#resetButtons#0;class#HelpPanel#0" expanded="false" />
-            <element signature="method#loadTxtToContentPanel#0;class#HelpPanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -853,50 +811,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/ChronicleSettings/KeybindsHelp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#645#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assembly.java">
+    <entry file="file://$PROJECT_DIR$/ChronicleSettings/MarkdownHelp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+        <state relative-caret-position="105">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChronicleSettings/GeneralHelp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChronicleSettings/About">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EditingPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="75" lean-forward="false" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
           <folding>
-            <element signature="e#0#9639#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#createContentPanel#0;class#Assembly#0" expanded="false" />
-            <element signature="method#createAuxillaryPanel#0;class#Assembly#0" expanded="false" />
-            <element signature="class#5828:6715" expanded="false" />
-            <element signature="method#resetButtons#0;class#Assembly#0" expanded="false" />
-            <element signature="method#createLogoPanel#0;class#Assembly#0" expanded="false" />
+            <element signature="method#EditingPanel#0;class#EditingPanel#0" expanded="false" />
+            <element signature="method#createHeaderPanel#0;class#EditingPanel#0" expanded="false" />
+            <element signature="method#createTextPanel#0;class#EditingPanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/EntryCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+        <state relative-caret-position="120">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <element signature="e#883#891#0" expanded="true" />
-            <marker date="1522215550295" expanded="false" signature="2579:5845" ph="{...}" />
-            <marker date="1522215550295" expanded="false" signature="7427:7650" ph="{...}" />
-            <marker date="1522215550295" expanded="false" signature="7683:7759" ph="{}" />
+            <element signature="e#0#1654#0" expanded="true" />
+            <element signature="method#EntryCollection#0;class#EntryCollection#0" expanded="false" />
+            <element signature="method#loadEntries#0;class#EntryCollection#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HelpPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#HelpPanel#0;class#HelpPanel#0" expanded="false" />
+            <element signature="method#createHeader#0;class#HelpPanel#0" expanded="false" />
+            <element signature="method#resetButtons#0;class#HelpPanel#0" expanded="false" />
+            <element signature="method#loadTxtToContentPanel#0;class#HelpPanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EntryData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="464">
+          <caret line="192" column="60" lean-forward="false" selection-start-line="192" selection-start-column="60" selection-end-line="192" selection-end-column="60" />
           <folding>
+            <element signature="e#0#6360#0" expanded="true" />
             <element signature="method#EntryData#0;class#EntryData#0" expanded="false" />
             <element signature="method#calculateHeaderColor#0;class#EntryData#0" expanded="false" />
             <element signature="method#findDate#0;class#EntryData#0" expanded="false" />
@@ -908,14 +899,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EditingPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        <state relative-caret-position="45">
+          <caret line="3" column="73" lean-forward="false" selection-start-line="3" selection-start-column="73" selection-end-line="3" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntryButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="66" column="12" lean-forward="false" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
           <folding>
+            <element signature="method#EntryButton#0;class#EntryButton#0" expanded="false" />
+            <element signature="method#buttonSelected#0;class#EntryButton#0" expanded="false" />
+            <element signature="method#buttonUnselected#0;class#EntryButton#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntryPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#7788#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#EditingPanel#0;class#EditingPanel#0" expanded="false" />
-            <element signature="method#createHeaderPanel#0;class#EditingPanel#0" expanded="false" />
+            <element signature="e#1003#1011#0" expanded="true" />
+            <element signature="method#EntryPanel#0;class#EntryPanel#0" expanded="false" />
+            <element signature="method#createBody#0;class#EntryPanel#0" expanded="false" />
+            <element signature="method#processFileContent#0;class#EntryPanel#0" expanded="false" />
+            <element signature="method#createHeader#0;class#EntryPanel#0" expanded="false" />
+            <element signature="method#loadEntryData#0;class#EntryPanel#0" expanded="false" />
+            <element signature="method#main#0;class#EntryPanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SelectionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#481#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assembly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#10013#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#Assembly#0;class#Assembly#0" expanded="false" />
+            <element signature="method#createContentPanel#0;class#Assembly#0" expanded="false" />
+            <element signature="method#createAuxillaryPanel#0;class#Assembly#0" expanded="false" />
+            <element signature="method#createButtonPanel#0;class#Assembly#0" expanded="false" />
+            <element signature="method#resetButtons#0;class#Assembly#0" expanded="false" />
+            <element signature="method#createLogoPanel#0;class#Assembly#0" expanded="false" />
           </folding>
         </state>
       </provider>

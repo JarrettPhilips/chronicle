@@ -4,8 +4,7 @@ Side Menu
 =========
 You may have noticed a few buttons below the Chronicle brand on the left side of the window. We will briefly go over their functions.
 
-Plus Sign - Creates a new, blank entry
-Pencil - Edits the entry currently being viewed
-Circle Arrow - Refreshes both the current entry and the entry list on the side panel of the program
-H - Loads the help panel that you are on now
+Add - Creates a new, blank entry
+Edit - Edits the entry currently being viewed
+Help - Loads the help panel that you are in now
 

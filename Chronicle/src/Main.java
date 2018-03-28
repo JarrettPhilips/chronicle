@@ -1,10 +1,8 @@
 /*
     Main.java
 
-    Loads primary objects
+    Loads primary objects, contains main function that begins the program
 */
-
-import java.awt.*;
 
 public class Main {
     /*

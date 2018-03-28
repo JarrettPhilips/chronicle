@@ -1,9 +1,16 @@
+/*
+    EntryPanel.java
+
+    Content panel that displays a single entry
+*/
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.nio.file.attribute.AclEntryType;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -26,18 +33,25 @@ public class EntryPanel extends JPanel{
     private EntryData entryData;
     private ArrayList<String> directoryOfPhotos = new ArrayList<String>();
 
+    JEditorPane editorPane;
+    JPanel header;
+
+    JLabel titleLabel;
+    JLabel dateLabel;
+    JLabel ratingLabel;
+
     /*
         Constructors
     */
-    /*
     public EntryPanel(HashMap<String, Color> cp){
         this.colorPackage = cp;
         this.setPreferredSize(new Dimension(600, 400));
-
         this.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
+
         JScrollPane body = createBody();
         JPanel header = createHeader();
+
         c.fill = GridBagConstraints.HORIZONTAL;
         c.anchor = GridBagConstraints.WEST;
         this.add(header, c);
@@ -47,22 +61,18 @@ public class EntryPanel extends JPanel{
         c.fill = GridBagConstraints.BOTH;
         this.add(body, c);
         c.gridy ++;
-    }*/
+    }
 
     /*
         Functions
     */
-    /*
     private JScrollPane createBody(){
-        JEditorPane editorPane = new JEditorPane();
+        editorPane = new JEditorPane();
         editorPane.setContentType("text/html");
         editorPane.putClientProperty(JEditorPane.HONOR_DISPLAY_PROPERTIES, Boolean.TRUE);
         editorPane.setFont(textFont);
         editorPane.setEditable(false);
         editorPane.setBorder(new EmptyBorder(60, 60, 60, 60));
-        String content = getFileContent();
-        content = processFileContent(content);
-        editorPane.setText(content);
         editorPane.setBackground(colorPackage.get("secondaryColor"));
 
         JScrollPane scrollPane = new JScrollPane(editorPane);
@@ -74,7 +84,7 @@ public class EntryPanel extends JPanel{
     }
 
     //Transforms basic markdown to HTML readable by the editorPane
-    private String processFileContent(String content){
+    private String processFileContent(String content, EntryData entryData){
         boolean tagOpen = false;
         int photoStartIndex = 0;
         int ratingStartIndex = 0;
@@ -93,7 +103,7 @@ public class EntryPanel extends JPanel{
                 photoStartIndex = i;
             } else if(doubleCharKey.equals(">>")){
                 String photoDirectory = content.substring(photoStartIndex + 2, i);
-                photoDirectory = entryDirectory + "/" + photoDirectory;
+                photoDirectory = entryData.getEntryDirectory() + "/" + photoDirectory;
                 Dimension panelSize = this.getSize();
                 System.out.println(panelSize);
                 if(panelSize.width == 0 || panelSize.height == 0){
@@ -109,19 +119,6 @@ public class EntryPanel extends JPanel{
                 }
                 String formatedPhotoTag = "<img src='file://"+photoDirectory+"' width="+scaledImageWidth+" height="+scaledImageHeight+"> </img>";
                 content = content.substring(0, photoStartIndex) + formatedPhotoTag + content.substring(i + 2, content.length());
-            } else if(doubleCharKey.equals("^^")){
-                if(tagOpen){
-                    String ratingString = content.substring(ratingStartIndex + 2, i);
-                    int ratingInt = Integer.parseInt(ratingString);
-                    if(ratingInt > 0 && ratingInt < 11){
-                        rating = ratingInt;
-                    }
-                    content = content.substring(0, ratingStartIndex) + content.substring(i + 2, content.length());
-                    tagOpen = false;
-                } else {
-                    ratingStartIndex = i;
-                    tagOpen = true;
-                }
             }
         }
 
@@ -144,22 +141,23 @@ public class EntryPanel extends JPanel{
     }
 
     private JPanel createHeader(){
-        JPanel header = new JPanel();
+        header = new JPanel();
         header.setMinimumSize(headerMinimumSize);
         header.setMaximumSize(headerMaximumSize);
-        header.setBackground(primaryColor);
-        header.setForeground(secondaryColor);
+        header.setBackground(colorPackage.get("primaryColor"));
+        header.setForeground(colorPackage.get("secondaryColor"));
         header.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
 
-        JLabel titleLabel = new JLabel(title);
+        titleLabel = new JLabel("Title");
         titleLabel.setFont(titleFont);
-        titleLabel.setForeground(secondaryColor);
+        titleLabel.setForeground(colorPackage.get("secondaryColor"));
         c.anchor = GridBagConstraints.WEST;
         header.add(titleLabel, c);
-        JLabel dateLabel = new JLabel(dateString);
+
+        dateLabel = new JLabel("Date");
         dateLabel.setFont(dateFont);
-        dateLabel.setForeground(secondaryColor);
+        dateLabel.setForeground(colorPackage.get("secondaryColor"));
         c.gridx ++;
         header.add(dateLabel, c);
 
@@ -173,40 +171,32 @@ public class EntryPanel extends JPanel{
         header.add(spacerLabel, c);
 
         //Rating
-        if(rating != -1) {
-            JLabel ratingLabel = new JLabel(Integer.toString(rating));
-            ratingLabel.setFont(ratingFont);
-            ratingLabel.setForeground(secondaryColor);
-            c.anchor = GridBagConstraints.EAST;
-            c.fill = GridBagConstraints.NONE;
-            c.gridx++;
-            header.add(ratingLabel, c);
-            header.setBackground(getEntryColor());
-        }
+        ratingLabel = new JLabel("");
+        ratingLabel.setFont(ratingFont);
+        ratingLabel.setForeground(colorPackage.get("secondaryColor"));
+        c.anchor = GridBagConstraints.EAST;
+        c.fill = GridBagConstraints.NONE;
+        c.gridx++;
+        header.add(ratingLabel, c);
+        header.setBackground(colorPackage.get("primaryColor"));
 
         header.setBorder(new EmptyBorder(20, 60, 20, 60));
 
         return header;
     }
 
-    private File[] txtFinder(String dirName){
-        File dir = new File(dirName);
+    private void loadEntryData(EntryData entryData){
+        //Update Header
+        titleLabel.setText(entryData.getTitleString());
+        dateLabel.setText(entryData.getDateString());
+        ratingLabel.setText(Integer.toString(entryData.getRating()));
+        header.setBackground(entryData.getHeaderColor());
 
-        return dir.listFiles(new FilenameFilter() {
-            public boolean accept(File dir, String filename)
-            { return filename.endsWith(".txt"); }
-        } );
-
+        //Update Body
+        String content = entryData.getEntryText();
+        content = processFileContent(content, entryData);
+        editorPane.setText(content);
     }
-
-    public void rescaleImages(){ //Called to adjust the image sizes to accommadate a new window size
-
-    }
-
-    public String getTxtDirectory(){
-        return entryDirectory + "/" + txtEntryDirectory;
-    }
-    */
 
     /*
         Testing Main

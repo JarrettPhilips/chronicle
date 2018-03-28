@@ -1,7 +1,7 @@
 /*
     EntryData.java
 
-    Stores and manages the data for each entry
+    Stores, manages, and partially processes the data for each entry
 */
 
 import java.awt.*;
@@ -187,9 +187,11 @@ public class EntryData {
     /*
         Get Functions
     */
-    public String getTitle(){return titleString;}
+    public String getTitleString(){return titleString;}
     public String getDateString(){return dateString;}
     public String getEntryText(){return entryText;}
+    public String getEntryDirectory(){return entryDirectory;}
     public Color getHeaderColor(){return headerColor;}
     public int getDateInt(){return dateInt;}
+    public int getRating(){return rating;}
 }

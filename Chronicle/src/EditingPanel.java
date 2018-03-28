@@ -1,3 +1,9 @@
+/*
+    EditingPanel.java
+
+    Content panel that allows the user to create and modify journal entries
+*/
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -7,20 +13,20 @@ public class EditingPanel extends JPanel{
     /*
         Variables
     */
-    HashMap<String, Color> colorPackage;
-    Color backgroundColor;
+    private HashMap<String, Color> colorPackage;
+    private Color backgroundColor;
 
-    Dimension desiredSize = new Dimension(600, 400);
+    private Dimension desiredSize = new Dimension(600, 400);
 
     //Components
-    JPanel headerPanel;
-    JPanel textPanel;
+    private JPanel headerPanel;
+    private JPanel textPanel;
 
-    JTextArea textArea;
-    JTextField titleTextField;
-    JTextField dateTextField;
+    private JTextArea textArea;
+    private JTextField titleTextField;
+    private JTextField dateTextField;
 
-    JButton saveButton;
+    private JButton saveButton;
 
     /*
         Constructors
@@ -113,6 +119,11 @@ public class EditingPanel extends JPanel{
 
     private void saveEditedEntry(){
 
+    }
+
+    public void lockTextFields(){
+        titleTextField.setEditable(false);
+        dateTextField.setEditable(false);
     }
 
     /*

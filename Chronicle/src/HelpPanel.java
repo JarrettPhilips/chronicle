@@ -1,7 +1,7 @@
 /*
     HelpPanel.java
 
-    JPanel to be loaded into the Assembly frame that displays information to provide guidance to users. Reads in this information from external files.
+    Content panel to be loaded into the Assembly frame that displays information to provide guidance to users. Reads in this information from external files.
 */
 
 import javax.swing.*;

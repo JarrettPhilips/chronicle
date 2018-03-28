@@ -29,11 +29,11 @@ public class Assembly extends JFrame {
     private JPanel logoPanel;
 
     //Content Panels
-    private JPanel wallpaperPanel;
-    private JPanel selectionPanel;
-    private JPanel entryPanel;
-    private JPanel helpPanel;
-    private JPanel editingPanel;
+    private WallpaperPanel wallpaperPanel;
+    private SelectionPanel selectionPanel;
+    private EntryPanel entryPanel;
+    private HelpPanel helpPanel;
+    private EditingPanel editingPanel;
 
     //Buttons
     private JButton createEntryButton;
@@ -184,11 +184,18 @@ public class Assembly extends JFrame {
                     editEntryButtonToggled = false;
                     editEntryButton.setBackground(colorPackage.get("primaryColor"));
                     editEntryButton.setForeground(colorPackage.get("secondaryColor"));
+                    contentPanel.removeAll();
+                    contentPanel.add(wallpaperPanel, c);
+                    contentPanel.updateUI();
                 } else {
                     resetButtons();
                     editEntryButtonToggled = true;
                     editEntryButton.setBackground(colorPackage.get("secondaryColor"));
                     editEntryButton.setForeground(colorPackage.get("primaryColor"));
+                    contentPanel.removeAll();
+                    editingPanel.lockTextFields();
+                    contentPanel.add(editingPanel, c);
+                    contentPanel.updateUI();
                 }
             }
         } );
