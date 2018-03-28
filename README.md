@@ -8,7 +8,7 @@
 |---------------------------|-----------|
 | Import settings           |     X     |
 | Entry management backend  |     X     |
-| Frame and UI main panel   |           |
+| Frame and UI main panel   |     X     |
 | Selection Panel           |           |
 | Entry Panel               |           |
 | Help Panel                |     X     |
