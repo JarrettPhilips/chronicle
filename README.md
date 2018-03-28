@@ -3,6 +3,7 @@
 
 ### Version History
 *3.0.0* - Currently in progress, will utilize some 2.0.0 code, but will contain lots of new code for better function and performance and a completely new organizational system.
+
 | Objective                 | Completed |
 |---------------------------|-----------|
 | Import settings           |     X     |
