@@ -16,20 +16,22 @@ public class HelpPanel extends JPanel{
     /*
         Variables
     */
-    Color primaryColor;
-    Color secondaryColor;
+    private Color primaryColor;
+    private Color secondaryColor;
 
-    JTextArea contentTextArea;
+    private JTextArea contentTextArea;
 
-    JButton generalButton;
-    JButton markdownButton;
-    JButton keybindsButton;
-    JButton aboutButton;
+    private JButton generalButton;
+    private JButton setupButton;
+    private JButton markdownButton;
+    private JButton keybindsButton;
+    private JButton aboutButton;
 
-    boolean generalButtonPressed = true;
-    boolean markdownButtonPressed = false;
-    boolean keybindsButtonPressed = false;
-    boolean aboutButtonPressed = false;
+    private boolean generalButtonPressed = true;
+    private boolean setupButtonPressed = false;
+    private boolean markdownButtonPressed = false;
+    private boolean keybindsButtonPressed = false;
+    private boolean aboutButtonPressed = false;
 
     /*
         Constructors
@@ -87,6 +89,20 @@ public class HelpPanel extends JPanel{
         c.anchor = GridBagConstraints.WEST;
         header.add(generalButton, c);
 
+        setupButton = new JButton("Setup");
+        setupButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                resetButtons();
+                setupButton.setBackground(secondaryColor);
+                setupButton.setForeground(primaryColor);
+                loadTxtToContentPanel("SetupHelp");
+            }
+        });
+        setupButton.setBorder(new EmptyBorder(20,20,20,20));
+        setupButton.setOpaque(true);
+        c.gridx = 1;
+        header.add(setupButton, c);
+
         markdownButton = new JButton("Markdown");
         markdownButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -98,7 +114,7 @@ public class HelpPanel extends JPanel{
         });
         markdownButton.setBorder(new EmptyBorder(20,20,20,20));
         markdownButton.setOpaque(true);
-        c.gridx = 1;
+        c.gridx = 2;
         header.add(markdownButton, c);
 
         keybindsButton = new JButton("Keybinds");
@@ -112,7 +128,7 @@ public class HelpPanel extends JPanel{
         });
         keybindsButton.setBorder(new EmptyBorder(20,20,20,20));
         keybindsButton.setOpaque(true);
-        c.gridx = 2;
+        c.gridx = 3;
         header.add(keybindsButton, c);
 
         aboutButton = new JButton("About");
@@ -126,12 +142,12 @@ public class HelpPanel extends JPanel{
         });
         aboutButton.setBorder(new EmptyBorder(20,20,20,20));
         aboutButton.setOpaque(true);
-        c.gridx = 3;
+        c.gridx = 4;
         header.add(aboutButton, c);
 
         JPanel fillerPanel = new JPanel();
         fillerPanel.setBackground(primaryColor);
-        c.gridx = 4;
+        c.gridx = 5;
         c.weightx = 1.0;
         c.fill = GridBagConstraints.BOTH;
         header.add(fillerPanel, c);
@@ -144,12 +160,15 @@ public class HelpPanel extends JPanel{
 
     private void resetButtons(){
         generalButtonPressed = false;
+        setupButtonPressed = false;
         markdownButtonPressed = false;
         keybindsButtonPressed = false;
         aboutButtonPressed = false;
 
         generalButton.setBackground(primaryColor);
         generalButton.setForeground(secondaryColor);
+        setupButton.setBackground(primaryColor);
+        setupButton.setForeground(secondaryColor);
         markdownButton.setBackground(primaryColor);
         markdownButton.setForeground(secondaryColor);
         keybindsButton.setBackground(primaryColor);

@@ -126,6 +126,11 @@ public class EditingPanel extends JPanel{
         dateTextField.setEditable(false);
     }
 
+    public void unlockTextFields(){
+        titleTextField.setEditable(true);
+        dateTextField.setEditable(true);
+    }
+
     /*
         Auxillary Functions
     */

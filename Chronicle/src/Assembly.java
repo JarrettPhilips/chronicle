@@ -20,7 +20,7 @@ public class Assembly extends JFrame {
     private Font logoFont = new Font("Futura", Font.BOLD, 40);
     private Font buttonFont = new Font("Futura", Font.PLAIN, 20);
 
-    private Dimension defaultSize = new Dimension(600, 400);
+    private Dimension defaultSize = new Dimension(1000, 600);
 
     //Components
     private JPanel contentPanel;
@@ -47,7 +47,7 @@ public class Assembly extends JFrame {
     /*
         Constructors
     */
-    public Assembly(HashMap<String, Color> cp){
+    public Assembly(HashMap<String, Color> cp, EntryCollection entryCollection){
         //Sets up the JFrame settings
         colorPackage = cp;
         this.setSize(defaultSize);
@@ -90,7 +90,9 @@ public class Assembly extends JFrame {
         //Generates content-containing panels
         wallpaperPanel = new WallpaperPanel(colorPackage);
         helpPanel = new HelpPanel(colorPackage);
-        editingPanel = new EditingPanel(colorPackage);
+        editingPanel = new EditingPanel(colorPackage); //This will probably need to be created for each instance
+        selectionPanel = new SelectionPanel(colorPackage, entryCollection);
+        entryPanel = new EntryPanel(colorPackage);
 
         //Sets default content to components
         c = new GridBagConstraints();
@@ -99,7 +101,10 @@ public class Assembly extends JFrame {
         c.weightx = 1.0;
         c.weighty = 1.0;
         c.fill = GridBagConstraints.BOTH;
+
         contentPanel.add(wallpaperPanel, c);
+        //contentPanel.add(entryPanel, c);
+        auxillaryPanel.add(selectionPanel, c);
 
         //Updates the frame
         this.revalidate();
@@ -109,6 +114,10 @@ public class Assembly extends JFrame {
     /*
         Functions
     */
+    public void loadEntry(){
+
+    }
+
     private JPanel createContentPanel(){
         JPanel cp = new JPanel();
         cp.setLayout(new GridBagLayout());
@@ -156,6 +165,7 @@ public class Assembly extends JFrame {
                     createEntryButton.setBackground(colorPackage.get("secondaryColor"));
                     createEntryButton.setForeground(colorPackage.get("primaryColor"));
                     contentPanel.removeAll();
+                    editingPanel.unlockTextFields();
                     contentPanel.add(editingPanel, c);
                     contentPanel.updateUI();
                 }

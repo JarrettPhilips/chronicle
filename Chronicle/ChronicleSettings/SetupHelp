@@ -1,0 +1,15 @@
+Setting up Chronicle is easy. It uses a plain text and ordinary directories to store journals. This means that even without the application, making and viewing journals is easy.
+
+Orginization
+------------
+HomeFolder
+    YYYYMMDD
+        Title.txt
+        Photo.jpg
+
+Details
+-------
+HomeFolder - This is where you keep all your entries. You should put this location in the settings file.
+YYYYMMDD - This is a folder for an entry. Each day will have its own folder.
+Title.txt - This where the text for the entry is stored. There should only be one of these.
+hoto.jpg - This is a photo refrenced in the entry. There can be as many of these as you want. Chronicle supports both jpg and png.

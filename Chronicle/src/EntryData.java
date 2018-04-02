@@ -33,11 +33,11 @@ public class EntryData {
     */
     public EntryData(String entryDirectory, HashMap<String, Color> colorPackage){
         this.entryDirectory = entryDirectory;
-        headerColor = calculateHeaderColor(colorPackage.get("secondaryColor"), colorPackage.get("highColor"), colorPackage.get("lowColor"), colorPackage.get("medianColor"));
         entryText = findContent();
         dateString = findDate();
         titleString = findTitle();
         rating = findRating(entryText);
+        headerColor = calculateHeaderColor(colorPackage.get("secondaryColor"), colorPackage.get("highColor"), colorPackage.get("lowColor"), colorPackage.get("medianColor"));
     }
 
     /*

@@ -21,6 +21,8 @@ public class Settings {
     private Color lowColor;
     private Color medianColor;
 
+    private Color whiteColor = new Color(255, 255, 255);
+
     public HashMap<String, Color> colorPackage = new HashMap<String, Color>();
 
     //Class Variables
@@ -99,6 +101,8 @@ public class Settings {
         colorPackage.put("highColor", highColor);
         colorPackage.put("lowColor", lowColor);
         colorPackage.put("medianColor", medianColor);
+
+        colorPackage.put("whiteColor", whiteColor);
     }
 
     /*
