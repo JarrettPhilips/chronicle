@@ -1,0 +1,5 @@
+Known Bugs / Issues to be fixed:
+--------------------------------
+- Tabs are not shown in display
+- Images do not scale after initial scaling
+- Program will crash if a two char key is found at the very end of a file

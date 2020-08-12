@@ -1,0 +1,15 @@
+=====================
+2.0.0 - Functionality
+=====================
+- Dynamically load entries
+- Fix Selection Panel Refresh
+=============================
+2.1.0 - Cosmetic Improvements
+=============================
+- Improve loading frame, add logo and loading bar
+- Cosmetic adjustments
+========================
+2.2.0 - Code Improvement
+========================
+- Add keybinds
+- Clean up codebase
